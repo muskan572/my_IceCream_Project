@@ -1,10 +1,10 @@
 import { Box, Button, Stack, Typography, useTheme } from "@mui/material";
 import { useState } from "react";
-import { Cone } from "@app/components/cone-items/cone";
-import { Stick } from "@app/components/stick-items.js/stick";
-import { Cup } from "@app/components/cup-items/cup";
-import { Cake } from "@app/components/cake-items/cake";
-import { Waffel } from "@app/components/waffel-items/waffel";
+import { Cone } from "../components/cone-items/cone";
+import { Stick } from "../components/stick-items/stick";
+import { Cup } from "../components/cup-items/cup";
+import { Cake } from "../components/cake-Items/cake";
+import { Waffel } from "../components/waffel-items/waffel";
 
 const ProductItems = ({ buttons }) => {
   const theme = useTheme();

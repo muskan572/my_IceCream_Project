@@ -1,6 +1,7 @@
-const { StickItems } = require("./stickItems");
 import { useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+const { StickItems } = require("./stickItems");
+
 const Stick = () => {
   const theme = useTheme();
   const Stick = [

@@ -6,10 +6,10 @@ import {
     Typography,
     useTheme
   } from '@mui/material'
-  import Grid from '@mui/material/Grid2'
+  import Grid from '@mui/material/Grid2';
   
-  import { ProductItems } from '../components/product-items'
-  import { About, FlavoursCard, Footer } from '@app/components'
+  import { ProductItems } from '../../../components';
+  import { About, FlavoursCard, Footer } from '../../../components';
   
   const HomePage = () => {
     const buttons = ['Cone', 'Stick', 'Cup', 'Cake', 'Waffels']

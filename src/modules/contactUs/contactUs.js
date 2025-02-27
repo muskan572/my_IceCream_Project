@@ -1,4 +1,4 @@
-import { Footer } from "@app/components";
+
 import {
   Box,
   Button,
@@ -15,6 +15,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import { Footer } from "../../components";
 
 export default function ContactUs() {
   const theme = useTheme();
@@ -263,7 +264,7 @@ export default function ContactUs() {
         </Card>
       </Stack>
       <Box marginTop={10}>
-        <Footer />
+       <Footer/>
       </Box>
     </>
   );

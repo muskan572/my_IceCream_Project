@@ -1,6 +1,8 @@
-const { CakeItems } = require("./cakeItems");
+
 import { useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+const { CakeItems } = require("./cakeItems");
+
 const Cake = () => {
   const theme = useTheme();
   const Cake = [
