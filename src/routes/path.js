@@ -4,7 +4,7 @@ function path(root, subLink) {
   return `${root}${subLink}`;
 }
 
-const ROOTS_DASH = "/sg-icecream-web";
+const ROOTS_DASH = "/icecream-web";
 
 // ----------------------------------------------------------------------
 
