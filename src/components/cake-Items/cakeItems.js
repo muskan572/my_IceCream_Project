@@ -1,11 +1,11 @@
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { ProductCard } from "../productBackgroundCard";
 
-const CakeItems = ({ img, cakeName, color }) => {
+const CakeItems = ({ image, cakeName, color }) => {
   return (
     <>
       <ProductCard>
-        <img
+        <image
           src="assets/icons/Vector 10.svg"
           alt="my SVG image"
           style={{
@@ -20,7 +20,7 @@ const CakeItems = ({ img, cakeName, color }) => {
         <Typography variant="body1">{cakeName}</Typography>
         <CardContent>
           <CardMedia
-            image={img}
+            image={image}
             title={cakeName}
             sx={{
               width: { xs: "170px", sm: "160px", md: "180px" },
@@ -39,7 +39,7 @@ const CakeItems = ({ img, cakeName, color }) => {
             marginTop: "-10px",
           }}
         >
-          <img
+          <image
             src="assets/images/Mask group (4).png"
             alt="click"
             style={{ width: "70px" }}

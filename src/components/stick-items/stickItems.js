@@ -1,11 +1,11 @@
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { ProductCard } from "../productBackgroundCard";
 
-const StickItems = ({ img, StickName, color }) => {
+const StickItems = ({ image, StickName, color }) => {
   return (
     <>
       <ProductCard>
-        <img
+        <image
           src="assets/icons/Vector 10.svg"
           alt="my SVG image"
           style={{
@@ -20,7 +20,7 @@ const StickItems = ({ img, StickName, color }) => {
         <Typography variant="body1">{StickName}</Typography>
         <CardContent>
           <CardMedia
-            image={img}
+            image={image}
             title={StickName}
             sx={{
               width: { xs: "150px", sm: "160px", md: "180px" },
@@ -39,7 +39,7 @@ const StickItems = ({ img, StickName, color }) => {
             margintop: "-10px",
           }}
         >
-          <img
+          <image
             src="assets/images/Mask group (4).png"
             alt="click"
             style={{ width: "70px" }}

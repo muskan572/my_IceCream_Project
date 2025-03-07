@@ -1,11 +1,11 @@
 import { Box, CardContent, CardMedia, Typography } from "@mui/material";
 import { ProductCard } from "../productBackgroundCard";
 
-const ConeItems = ({ img, coneName, color }) => {
+const ConeItems = ({ image, coneName, color }) => {
   return (
     <>
       <ProductCard>
-        <img
+        <image
           src="assets/icons/Vector 10.svg"
           alt="my SVG image"
           style={{
@@ -20,7 +20,7 @@ const ConeItems = ({ img, coneName, color }) => {
         <Typography variant="body1">{coneName}</Typography>
         <CardContent>
           <CardMedia
-            image={img}
+            image={image}
             title={coneName}
             sx={{
               width: { xs: "140px", sm: "160px", md: "180px" },
@@ -39,7 +39,7 @@ const ConeItems = ({ img, coneName, color }) => {
             marginTop: "-10px",
           }}
         >
-          <img
+          <image
             src="assets/images/Mask group (4).png"
             alt="click"
             style={{ width: "70px" }}

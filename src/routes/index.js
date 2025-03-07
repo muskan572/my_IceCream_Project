@@ -24,7 +24,7 @@ export function Router() {
       children :[{
         path: PATH_DASH.root,
           element: <Navbars />,
-        children: [
+        children: [ 
           { path: PATH_DASH.home, element: <HomePage /> },
           {
             path: PATH_DASH.contact,
