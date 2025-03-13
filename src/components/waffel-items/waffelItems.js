@@ -11,7 +11,7 @@ const WaffelItems = ({ image, waffelName, color }) => {
           style={{
             width: "179px",
             height: { xs: "200px" },
-            marginTop: "50px",
+            marginTop: "200px",
             marginRight: "34px",
             objectFit: "fill",
             fill: color,
@@ -23,7 +23,7 @@ const WaffelItems = ({ image, waffelName, color }) => {
             image={image}
             title={waffelName}
             sx={{
-              width: { xs: "150px", sm: "160px", md: "180px" },
+              width: { xs: "170px", sm: "160px", md: "180px" },
               height: { sm: "290px", xs: "280px", md: "320px" },
               marginTop: "-370px",
             }}

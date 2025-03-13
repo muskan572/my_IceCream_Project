@@ -1,5 +1,5 @@
 import { useTheme } from "@mui/material";
-import Grid2 from "@mui/material/Grid2"; 
+import Grid2 from "@mui/material/Grid2";
 const { WaffelItems } = require("./waffelItems");
 
 const Waffel = () => {
@@ -48,11 +48,15 @@ const Waffel = () => {
       bg: theme.palette.tertiary?.main || "#ffffff", // Added fallback in case tertiary is undefined
     },
   ];
-  
+
   return (
-    <Grid2 container spacing={2}> {/* Added spacing for better UI */}
+    <Grid2 container spacing={2}>
+      {" "}
+      {/* Added spacing for better UI */}
       {Waffel.map((item) => (
-        <Grid2 size xs={12} sm={6} md={4} key={item.id}> {/* Corrected 'size' to 'item' */}
+        <Grid2 size xs={12} sm={6} md={12} key={item.id}>
+          {" "}
+          {/* Corrected 'size' to 'item' */}
           <WaffelItems
             waffelName={item.waffelName}
             image={item.image}

@@ -26,6 +26,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 import NavbarMenu from "./navbarMenu";
 import { HomePage } from "../home/view/home-Page";
+import { Link } from "react-router-dom";
 
 export default function Navbars() {
   const [input, setInput] = useState("");
@@ -109,12 +110,14 @@ export default function Navbars() {
               >
                 Products
               </Button>
-              <Button
-                color="inherit"
-                sx={{ fontWeight: "normal", fontSize: "17px" }}
-              >
-                About Us
-              </Button>
+              <Link to="/aboutUs">
+                <Button
+                  color="inherit"
+                  sx={{ fontWeight: "normal", fontSize: "17px" }}
+                >
+                  About Us
+                </Button>
+              </Link>
               <Button
                 color="inherit"
                 sx={{ fontWeight: "normal", fontSize: "17px" }}

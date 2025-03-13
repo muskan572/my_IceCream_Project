@@ -5,23 +5,18 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const socialMedia = [
     {
-      socialMediaLink:
-        "https://www.facebook.com/profile.php?id=100088565146093",
+      socialMediaLink: "https://www.facebook.com/profile.php?id=61552203032346",
       name: "Facebook",
       img: "assets/images/facebook.png",
     },
     {
-      socialMediaLink: "https://www.instagram.com/syncglob/",
+      socialMediaLink: "https://www.instagram.com/muskan_jhedu/",
       name: "Instagram",
       img: "assets/images/instagram.png",
     },
+
     {
-      socialMediaLink: "https://www.linkedin.com/company/syncglob/mycompany/",
-      name: "Twitter",
-      img: "assets/images/linkedin.png",
-    },
-    {
-      socialMediaLink: "https://www.linkedin.com/company/syncglob/mycompany/",
+      socialMediaLink: "https://www.linkedin.com/in/muskan-jhedu-b49a49276/",
       name: "LinkedIn",
       img: "assets/images/twitter.png",
     },

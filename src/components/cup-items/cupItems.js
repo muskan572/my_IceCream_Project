@@ -11,7 +11,7 @@ const CupItems = ({ image, cupName, color }) => {
           style={{
             width: "179px",
             height: { xs: "200px" },
-            marginTop: "50px",
+            marginTop: "190px",
             marginRight: "34px",
             objectFit: "fill",
             fill: color,

@@ -11,7 +11,7 @@ const CakeItems = ({ image, cakeName, color }) => {
           style={{
             width: "179px",
             height: { xs: "200px" },
-            marginTop: "50px",
+            marginTop: "200px",
             marginRight: "34px",
             objectFit: "fill",
             fill: color,

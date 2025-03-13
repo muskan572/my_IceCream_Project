@@ -11,7 +11,7 @@ const ConeItems = ({ image, coneName, color }) => {
           style={{
             width: "179px",
             height: { xs: "200px" },
-            marginTop: "55px",
+            marginTop: "170px",
             marginRight: "34px",
             objectFit: "fill",
             fill: color,
