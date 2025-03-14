@@ -50,13 +50,9 @@ const Waffel = () => {
   ];
 
   return (
-    <Grid2 container spacing={2}>
-      {" "}
-      {/* Added spacing for better UI */}
+    <Grid2 container>
       {Waffel.map((item) => (
-        <Grid2 size xs={12} sm={6} md={12} key={item.id}>
-          {" "}
-          {/* Corrected 'size' to 'item' */}
+        <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
           <WaffelItems
             waffelName={item.waffelName}
             image={item.image}
