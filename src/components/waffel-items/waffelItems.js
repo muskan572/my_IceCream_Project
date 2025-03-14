@@ -1,4 +1,4 @@
-import { Box, CardContent, CardMedia, Typography } from "@mui/material";
+import { CardContent, CardMedia, Typography } from "@mui/material";
 import { ProductCard } from "../productBackgroundCard";
 
 const WaffelItems = ({ image, waffelName, color }) => {
@@ -29,23 +29,6 @@ const WaffelItems = ({ image, waffelName, color }) => {
             }}
           />
         </CardContent>
-        <Box
-          sx={{
-            backgroundColor: color,
-            height: "60px",
-            width: "60px",
-            borderRadius: "120px",
-            marginLeft: { xs: "70px", md: "75px" },
-            marginRight: "70px",
-            marginTop: "-10px",
-          }}
-        >
-          <image
-            src="assets/images/Mask group (4).png"
-            alt="click"
-            style={{ width: "70px" }}
-          />
-        </Box>
       </ProductCard>
     </>
   );
