@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   AppBar,
   Button,
@@ -118,12 +119,14 @@ export default function Navbars() {
                   About Us
                 </Button>
               </Link>
-              <Button
-                color="inherit"
-                sx={{ fontWeight: "normal", fontSize: "17px" }}
-              >
-                Contact Us
-              </Button>
+              <Link to="/contactUs">
+                <Button
+                  color="inherit"
+                  sx={{ fontWeight: "normal", fontSize: "17px" }}
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </Stack>
           </Stack>
           <Menu

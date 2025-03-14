@@ -6,7 +6,7 @@ const ProductCard = ({ children }) => {
     <>
       <Stack
         sx={{
-          backgroundColor: theme.palette.primary.main,
+          backgroundColor: theme.palette.primary.light,
           width: "220px",
           borderTopRightRadius: "50%",
           borderTopLeftRadius: "50%",
