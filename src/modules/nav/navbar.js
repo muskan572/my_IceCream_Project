@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { PATH_DASH } from "../../routes/path";
 import {
   AppBar,
   Button,
@@ -111,7 +111,7 @@ export default function Navbars() {
               >
                 Products
               </Button>
-              <Link to="/aboutUs">
+              <Link to={PATH_DASH.aboutUs}>
                 <Button
                   color="inherit"
                   sx={{ fontWeight: "normal", fontSize: "17px" }}
@@ -119,7 +119,7 @@ export default function Navbars() {
                   About Us
                 </Button>
               </Link>
-              <Link to="/contactUs">
+              <Link to={PATH_DASH.contact}>
                 <Button
                   color="inherit"
                   sx={{ fontWeight: "normal", fontSize: "17px" }}
