@@ -1,5 +1,5 @@
 import { useTheme } from "@mui/material";
-import Grid2 from "@mui/material/Grid2";
+import Grid from "@mui/material/Grid2";
 const { WaffelItems } = require("./waffelItems");
 
 const Waffel = () => {
@@ -50,18 +50,18 @@ const Waffel = () => {
   ];
 
   return (
-    <Grid2 container>
+    <Grid container>
       {Waffel.map((item) => (
-        <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
+        <Grid size={{ xs: 12, sm: 6, md: 4 }} key={item.id}>
           <WaffelItems
             waffelName={item.waffelName}
             image={item.image}
             alt={item.alt}
             color={item.bg}
           />
-        </Grid2>
+        </Grid>
       ))}
-    </Grid2>
+    </Grid>
   );
 };
 
