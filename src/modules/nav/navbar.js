@@ -93,12 +93,14 @@ export default function Navbars() {
               padding={2}
               sx={{ display: { xs: "none", lg: "block" } }}
             >
-              <Button
-                color="inherit"
-                sx={{ fontWeight: "normal", fontSize: "17px" }}
-              >
-                Home
-              </Button>
+              <Link to={PATH_DASH.home}>
+                <Button
+                  color="inherit"
+                  sx={{ fontWeight: "normal", fontSize: "17px" }}
+                >
+                  Home
+                </Button>
+              </Link>
               <Button
                 color="inherit"
                 id="Products-button"
