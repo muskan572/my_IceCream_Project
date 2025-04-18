@@ -26,8 +26,7 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 import NavbarMenu from "./navbarMenu";
-import { HomePage } from "../home/view/home-Page";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function Navbars() {
   const [input, setInput] = useState("");
@@ -93,14 +92,15 @@ export default function Navbars() {
               padding={2}
               sx={{ display: { xs: "none", lg: "block" } }}
             >
-              <Link to={PATH_DASH.home}>
-                <Button
-                  color="inherit"
-                  sx={{ fontWeight: "normal", fontSize: "17px" }}
-                >
-                  Home
-                </Button>
-              </Link>
+              <Button
+                component={Link}
+                to={PATH_DASH.home}
+                color="inherit"
+                sx={{ fontWeight: "normal", fontSize: "17px" }}
+              >
+                Home
+              </Button>
+
               <Button
                 color="inherit"
                 id="Products-button"
@@ -229,8 +229,8 @@ export default function Navbars() {
             </Button>
           </Stack>
         </Toolbar>
+        <Outlet />
       </AppBar>
-      <HomePage />
     </>
   );
 }
