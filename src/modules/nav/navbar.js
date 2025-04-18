@@ -113,22 +113,24 @@ export default function Navbars() {
               >
                 Products
               </Button>
-              <Link to={PATH_DASH.aboutUs}>
-                <Button
-                  color="inherit"
-                  sx={{ fontWeight: "normal", fontSize: "17px" }}
-                >
-                  About Us
-                </Button>
-              </Link>
-              <Link to={PATH_DASH.contact}>
-                <Button
-                  color="inherit"
-                  sx={{ fontWeight: "normal", fontSize: "17px" }}
-                >
-                  Contact Us
-                </Button>
-              </Link>
+
+              <Button
+                component={Link}
+                to={PATH_DASH.aboutUs}
+                color="inherit"
+                sx={{ fontWeight: "normal", fontSize: "17px" }}
+              >
+                About Us
+              </Button>
+
+              <Button
+                component={Link}
+                to={PATH_DASH.contact}
+                color="inherit"
+                sx={{ fontWeight: "normal", fontSize: "17px" }}
+              >
+                Contact Us
+              </Button>
             </Stack>
           </Stack>
           <Menu
