@@ -1,8 +1,9 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const theme = useTheme();
   const socialMedia = [
     {
       socialMediaLink: "https://www.facebook.com/profile.php?id=61552203032346",
@@ -44,7 +45,10 @@ const Footer = () => {
             />
           </Stack>
 
-          <Typography sx={{ marginBottom: { lg: "5px" } }}>
+          <Typography
+            sx={{ marginBottom: { lg: "5px" } }}
+            color={theme.palette.grey[800]}
+          >
             Your ultimate destination for frozen delights in the heart of
             Creamy, India
           </Typography>
@@ -63,30 +67,54 @@ const Footer = () => {
           </Stack>
         </Grid>
         <Grid size={{ xs: 12, sm: 12, md: 3 }} padding={2}>
-          <Typography variant="h5" sx={{ marginBottom: "30px" }}>
+          <Typography
+            variant="h5"
+            color={theme.palette.grey[800]}
+            sx={{ marginBottom: "30px" }}
+          >
             Opening Hours
           </Typography>
-          <Typography>Mon - Sat : 09:00 am - 10:00 pm</Typography>
-          <Typography>Sun : 09:00 am - 05:00 pm </Typography>
+          <Typography color={theme.palette.grey[800]}>
+            Mon - Sat : 09:00 am - 10:00 pm
+          </Typography>
+          <Typography color={theme.palette.grey[800]}>
+            Sun : 09:00 am - 05:00 pm{" "}
+          </Typography>
         </Grid>
 
         <Grid size={{ xs: 12, sm: 12, md: 3 }} padding={2}>
-          <Typography variant="h5" sx={{ marginBottom: "30px" }}>
+          <Typography
+            variant="h5"
+            color={theme.palette.grey[800]}
+            sx={{ marginBottom: "30px" }}
+          >
             QuickLinks
           </Typography>
-          <Typography>About Us</Typography>
-          <Typography>Contact Us</Typography>
-          <Typography>Order Delivery</Typography>
-          <Typography>Payment & Tax</Typography>
-          <Typography>Terms Of Services</Typography>
+          <Typography color={theme.palette.grey[800]}>About Us</Typography>
+          <Typography color={theme.palette.grey[800]}>Contact Us</Typography>
+          <Typography color={theme.palette.grey[800]}>
+            Order Delivery
+          </Typography>
+          <Typography color={theme.palette.grey[800]}>Payment & Tax</Typography>
+          <Typography color={theme.palette.grey[800]}>
+            Terms Of Services
+          </Typography>
         </Grid>
 
         <Grid size={{ xs: 12, sm: 12, md: 3 }} padding={2}>
-          <Typography variant="h5" sx={{ marginBottom: "30px" }}>
+          <Typography
+            color={theme.palette.grey[800]}
+            variant="h5"
+            sx={{ marginBottom: "30px" }}
+          >
             Contact Us
           </Typography>
-          <Typography>166/124, Vihara Mawatha, Mulgampola</Typography>
-          <Typography variant="h5">Delivery Partners</Typography>
+          <Typography color={theme.palette.grey[800]}>
+            166/124, Vihara Mawatha, Mulgampola
+          </Typography>
+          <Typography color={theme.palette.grey[800]} variant="h5">
+            Delivery Partners
+          </Typography>
           <Stack
             direction="row"
             sx={{ justifyContent: { xs: "center", lg: "left" }, gap: "5px" }}
