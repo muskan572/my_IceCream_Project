@@ -17,7 +17,12 @@ const About = () => {
               About Us
             </Typography>
 
-            <Typography variant="h2" padding={1} sx={{ fontWeight: "600" }}>
+            <Typography
+              color={theme.palette.grey[800]}
+              variant="h2"
+              padding={1}
+              sx={{ fontWeight: "600" }}
+            >
               Get The Cool Down With Our
               <span style={{ color: theme.palette.primary.main }}>
                 {" "}
@@ -25,7 +30,11 @@ const About = () => {
               </span>
             </Typography>
 
-            <Typography variant="h6" padding={2}>
+            <Typography
+              variant="h6"
+              padding={2}
+              color={theme.palette.grey[700]}
+            >
               We believe that ice cream is more than just a dessert—it`s an
               experience. Our passion for creating delectable and unique flavors
               has driven us to become a beloved name in the world of ice cream.
@@ -33,7 +42,11 @@ const About = () => {
               and memorable ice cream using only the finest ingredients.
             </Typography>
 
-            <Typography variant="h6" padding={2}>
+            <Typography
+              variant="h6"
+              padding={2}
+              color={theme.palette.grey[700]}
+            >
               While we honor traditional favorites like classic vanilla and rich
               chocolate, we`re also known for our innovative and adventurous
               flavors.

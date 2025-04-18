@@ -38,7 +38,9 @@ const ProductItems = ({ buttons }) => {
         <Typography variant="h3" sx={{ color: theme.palette.secondary.main }}>
           Our Products
         </Typography>
-        <Typography variant="h3">Experience The Coolest Cream</Typography>
+        <Typography variant="h3" color={theme.palette.grey[800]}>
+          Experience The Coolest Cream
+        </Typography>
       </Box>
       <Stack
         direction="row"

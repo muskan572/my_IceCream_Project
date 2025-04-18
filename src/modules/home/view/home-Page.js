@@ -90,6 +90,7 @@ const HomePage = () => {
             }}
           >
             <Typography
+              color={theme.palette.grey[800]}
               variant="h1"
               sx={{
                 fontSize: { xs: "40px", sm: "50px", md: "60px", lg: "70px" },
@@ -104,7 +105,12 @@ const HomePage = () => {
               </span>
               Creations
             </Typography>
-            <Typography variant="h6" margin={3} fontWeight="normal">
+            <Typography
+              variant="h6"
+              margin={3}
+              fontWeight="normal"
+              color={theme.palette.grey[600]}
+            >
               The perfect Blend of Creamy and dreamy.
               <br />
               Taste the Magic in every scoop
@@ -144,7 +150,9 @@ const HomePage = () => {
               }}
             >
               <Grid size={{ xs: 4 }}>
-                <Typography variant="subtitle1">2000+</Typography>
+                <Typography variant="subtitle1" color={theme.palette.grey[600]}>
+                  2000+
+                </Typography>
                 <Typography
                   variant="subtitle2"
                   sx={{ color: theme.palette.grey[600] }}
@@ -154,7 +162,9 @@ const HomePage = () => {
               </Grid>
               <Divider orientation="vertical" variant="middle" flexItem />
               <Grid size={{ xs: 4 }}>
-                <Typography variant="subtitle1">20+</Typography>
+                <Typography variant="subtitle1" color={theme.palette.grey[600]}>
+                  20+
+                </Typography>
                 <Typography
                   variant="subtitle2"
                   sx={{ color: theme.palette.grey[600] }}
@@ -164,7 +174,9 @@ const HomePage = () => {
               </Grid>
               <Divider orientation="vertical" variant="middle" flexItem />
               <Grid size={{ xs: 4 }}>
-                <Typography variant="subtitle1">100k+</Typography>
+                <Typography variant="subtitle1" color={theme.palette.grey[600]}>
+                  100k+
+                </Typography>
                 <Typography
                   variant="subtitle2"
                   sx={{ color: theme.palette.grey[600] }}
@@ -197,7 +209,10 @@ const HomePage = () => {
             />
           </Grid>
           <Grid size={{ md: 3, xs: 10 }} sx={{ textAlign: "center" }}>
-            <Typography sx={{ fontSize: "25px" }}>
+            <Typography
+              sx={{ fontSize: "25px" }}
+              color={theme.palette.grey[800]}
+            >
               Satisfy Your
               <span style={{ color: theme.palette.primary.main }}>
                 {" "}
@@ -207,6 +222,7 @@ const HomePage = () => {
             </Typography>
             <Typography
               variant="body1"
+              color={theme.palette.grey[800]}
               sx={{ fontSize: "14px", marginTop: "5px" }}
             >
               Cool,refreshing and indulgent treats that are perfect

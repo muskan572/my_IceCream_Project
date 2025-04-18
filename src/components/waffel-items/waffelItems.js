@@ -1,7 +1,8 @@
-import { CardContent, CardMedia, Typography } from "@mui/material";
+import { CardContent, CardMedia, Typography, useTheme } from "@mui/material";
 import { ProductCard } from "../productBackgroundCard";
 
 const WaffelItems = ({ image, waffelName, color }) => {
+  const theme = useTheme();
   return (
     <>
       <ProductCard>
@@ -17,7 +18,9 @@ const WaffelItems = ({ image, waffelName, color }) => {
             fill: color,
           }}
         />{" "}
-        <Typography variant="body1">{waffelName}</Typography>
+        <Typography variant="body1" color={theme.palette.grey[800]}>
+          {waffelName}
+        </Typography>
         <CardContent>
           <CardMedia
             image={image}

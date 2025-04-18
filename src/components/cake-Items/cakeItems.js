@@ -1,7 +1,8 @@
-import { CardContent, CardMedia, Typography } from "@mui/material";
+import { CardContent, CardMedia, Typography, useTheme } from "@mui/material";
 import { ProductCard } from "../productBackgroundCard";
 
 const CakeItems = ({ image, cakeName, color }) => {
+  const theme = useTheme();
   return (
     <>
       <ProductCard>
@@ -17,7 +18,9 @@ const CakeItems = ({ image, cakeName, color }) => {
             fill: color,
           }}
         />
-        <Typography variant="body1">{cakeName}</Typography>
+        <Typography variant="body1" color={theme.palette.grey[800]}>
+          {cakeName}
+        </Typography>
         <CardContent>
           <CardMedia
             image={image}
