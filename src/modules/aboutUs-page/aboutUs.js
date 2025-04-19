@@ -1,5 +1,8 @@
 import { Footer } from "../../components";
 import { ExpandMore } from "@mui/icons-material";
+import { PATH_DASH } from "../../routes/path";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   Accordion,
   AccordionDetails,
@@ -16,6 +19,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const AboutUs = () => {
   const theme = useTheme();
@@ -53,6 +57,12 @@ const AboutUs = () => {
       title: "rocky rd",
     },
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // duration of animation in ms
+      once: true, // animate only once while scrolling down
+    });
+  }, []);
   return (
     <>
       <Stack
@@ -89,6 +99,7 @@ const AboutUs = () => {
       <Stack display="flex" direction="row" justifyContent="space-between">
         <Box>
           <img
+            data-aos="fade-up"
             src="assets/images/Group 1261153076.png"
             alt="van"
             style={{ width: "550px", margin: "10px" }}
@@ -101,10 +112,12 @@ const AboutUs = () => {
               alt="icon"
               style={{ width: "20px", height: "20px" }}
             />
-            <Typography>About Us</Typography>
+            <Typography color={theme.palette.grey[900]}>About Us</Typography>
           </Stack>
 
-          <Typography fontSize="30px">Our Company Overview</Typography>
+          <Typography fontSize="30px" color={theme.palette.grey[900]}>
+            Our Company Overview
+          </Typography>
 
           <Typography color="#666C89" marginTop={2} marginBottom={2}>
             Sweet Delights Ice Cream is positioned as a premium ice cream brand,
@@ -128,6 +141,8 @@ const AboutUs = () => {
           </Typography>
 
           <Button
+            component={Link}
+            to={PATH_DASH.contact}
             sx={{
               color: "white",
               backgroundColor: theme.palette.primary.main,
@@ -153,13 +168,13 @@ const AboutUs = () => {
         justifyContent="space-between"
       >
         <Box sx={{ width: "430px" }} padding={2}>
-          <Stack direction="row">
+          <Stack direction="row" alignItems={"center"}>
             <img
               src="assets/images/Icon Label (1).png"
               alt="icon"
-              style={{ width: "20px", height: "20px" }}
+              style={{ width: "30px", height: "30px" }}
             />
-            <Typography>SyncGlob Product Features</Typography>
+            <Typography>Lets Scoop Product Features</Typography>
           </Stack>
 
           <Typography
@@ -171,6 +186,8 @@ const AboutUs = () => {
 
           <Button
             variant="outlined"
+            component={Link}
+            to="/"
             sx={{
               color: "white",
               borderRadius: "5px",
@@ -178,7 +195,7 @@ const AboutUs = () => {
               marginTop: "20px",
             }}
           >
-            <Link to="/"> Visit Home Page</Link>
+            Visit Home Page
           </Button>
         </Box>
         <Stack flexDirection="row">
@@ -280,9 +297,15 @@ const AboutUs = () => {
               alt="icon"
               style={{ width: "20px", height: "20px" }}
             />
-            <Typography>FAQ Question</Typography>
+            <Typography color={theme.palette.grey[900]}>
+              FAQ Question
+            </Typography>
           </Stack>
-          <Typography variant="h4" sx={{ marginBottom: "40px" }}>
+          <Typography
+            variant="h4"
+            color={theme.palette.grey[800]}
+            sx={{ marginBottom: "40px" }}
+          >
             Frequently asked questions
           </Typography>
           <Accordion>
@@ -356,7 +379,7 @@ const AboutUs = () => {
       </Stack>
 
       <Divider sx={{ color: "#757575", fontSize: "30px" }}>
-        Brand Ice Creams With Syncglob
+        Brand Ice Creams
       </Divider>
 
       <Stack direction="row" spacing={7} marginBottom="100px">
@@ -376,7 +399,7 @@ const AboutUs = () => {
           </Box>
         ))}
       </Stack>
-      <Footer/>
+      <Footer />
     </>
   );
 };
