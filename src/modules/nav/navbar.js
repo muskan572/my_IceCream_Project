@@ -137,9 +137,6 @@ export default function Navbars() {
             id="Products-menu"
             anchorEl={anchorEl}
             open={openn}
-            MenuListProps={{
-              "aria-labelledby": "Products-button",
-            }}
             onClose={handleClose}
           >
             <NavbarMenu />
