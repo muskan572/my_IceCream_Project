@@ -1,8 +1,6 @@
 import { Footer } from "../../components";
 import { ExpandMore } from "@mui/icons-material";
 import { PATH_DASH } from "../../routes/path";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import {
   Accordion,
   AccordionDetails,
@@ -19,7 +17,6 @@ import {
   useTheme,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 const AboutUs = () => {
   const theme = useTheme();
@@ -57,12 +54,6 @@ const AboutUs = () => {
       title: "rocky rd",
     },
   ];
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // duration of animation in ms
-      once: true, // animate only once while scrolling down
-    });
-  }, []);
   return (
     <>
       <Stack
@@ -99,7 +90,6 @@ const AboutUs = () => {
       <Stack display="flex" direction="row" justifyContent="space-between">
         <Box>
           <img
-            data-aos="fade-up"
             src="assets/images/Group 1261153076.png"
             alt="van"
             style={{ width: "550px", margin: "10px" }}
