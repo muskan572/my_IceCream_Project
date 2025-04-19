@@ -261,8 +261,9 @@ const HomePage = () => {
           </Grid>
         ))}
       </Grid>
-      <About />
+
       <ProductItems buttons={buttons} />
+      <About />
       <Footer />
     </>
   );
