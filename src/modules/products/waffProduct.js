@@ -74,7 +74,7 @@ const WaffProduct = () => {
           <img
             src="assets/images/Group 1261153078.png"
             alt="cakes"
-            style={{ width: "650px" }}
+            style={{ width: "750px" }}
           />
         </Box>
         <Box>
