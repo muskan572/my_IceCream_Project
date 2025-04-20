@@ -110,7 +110,7 @@ const ConeProduct = () => {
         }}
       >
         <Grid container>
-          <Grid size={{ md: 6 }}>
+          <Grid size={{ md: 3 }}>
             <Box sx={{ width: 250, marginRight: 4 }}>
               <Typography variant="h6" gutterBottom>
                 Filters
@@ -159,13 +159,13 @@ const ConeProduct = () => {
             </Box>
           </Grid>
 
-          <Box sx={{ flexGrow: 1 }}>
+          <Grid container spacing={2}>
             {products.map((product, index) => (
-              <Grid size={{ md: 6 }} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
                 <ProductCard product={product} />
               </Grid>
             ))}
-          </Box>
+          </Grid>
         </Grid>
       </Box>
     </>

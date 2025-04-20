@@ -103,64 +103,64 @@ const CakeProduct = () => {
         </Box>
       </Stack>
       <Box sx={{ display: "flex", p: 2 }}>
-        <Grid>
-          <Box sx={{ width: 250, marginRight: 4 }}>
-            <Typography variant="h6" gutterBottom>
-              Filters
-            </Typography>
-            <Divider sx={{ mb: 2 }} />
+        <Grid container>
+          <Grid size={{ md: 4 }}>
+            <Box sx={{ width: 250, marginRight: 4 }}>
+              <Typography variant="h6" gutterBottom>
+                Filters
+              </Typography>
+              <Divider sx={{ mb: 2 }} />
 
-            {/* Filter by Price */}
-            <FormControl fullWidth sx={{ mb: 2 }}>
-              <InputLabel>Price</InputLabel>
-              <Select defaultValue="">
-                <MenuItem value={10}>$10 - $20</MenuItem>
-                <MenuItem value={30}>$30 - $50</MenuItem>
-                <MenuItem value={50}>$50 - $70</MenuItem>
-              </Select>
-            </FormControl>
+              {/* Filter by Price */}
+              <FormControl fullWidth sx={{ mb: 2 }}>
+                <InputLabel>Price</InputLabel>
+                <Select defaultValue="">
+                  <MenuItem value={10}>$10 - $20</MenuItem>
+                  <MenuItem value={30}>$30 - $50</MenuItem>
+                  <MenuItem value={50}>$50 - $70</MenuItem>
+                </Select>
+              </FormControl>
 
-            {/* Filter by Product Type */}
-            <FormControl fullWidth sx={{ mb: 2 }}>
-              <InputLabel>Product Type</InputLabel>
-              <Select defaultValue="">
-                <MenuItem value="icecream">Ice Cream</MenuItem>
-                <MenuItem value="popsicle">Popsicle</MenuItem>
-                <MenuItem value="gelato">Gelato</MenuItem>
-              </Select>
-            </FormControl>
+              {/* Filter by Product Type */}
+              <FormControl fullWidth sx={{ mb: 2 }}>
+                <InputLabel>Product Type</InputLabel>
+                <Select defaultValue="">
+                  <MenuItem value="icecream">Ice Cream</MenuItem>
+                  <MenuItem value="popsicle">Popsicle</MenuItem>
+                  <MenuItem value="gelato">Gelato</MenuItem>
+                </Select>
+              </FormControl>
 
-            {/* Filter by Category */}
-            <FormControl fullWidth sx={{ mb: 2 }}>
-              <InputLabel>Category</InputLabel>
-              <Select defaultValue="">
-                <MenuItem value="chocolate">Chocolate</MenuItem>
-                <MenuItem value="fruit">Fruit</MenuItem>
-                <MenuItem value="nuts">Nuts</MenuItem>
-              </Select>
-            </FormControl>
+              {/* Filter by Category */}
+              <FormControl fullWidth sx={{ mb: 2 }}>
+                <InputLabel>Category</InputLabel>
+                <Select defaultValue="">
+                  <MenuItem value="chocolate">Chocolate</MenuItem>
+                  <MenuItem value="fruit">Fruit</MenuItem>
+                  <MenuItem value="nuts">Nuts</MenuItem>
+                </Select>
+              </FormControl>
 
-            {/* Filter by Brand */}
-            <FormControl fullWidth sx={{ mb: 2 }}>
-              <InputLabel>Brand</InputLabel>
-              <Select defaultValue="">
-                <MenuItem value="brandA">Magnum</MenuItem>
-                <MenuItem value="brandB">Havmore B</MenuItem>
-                <MenuItem value="brandC">Vadilal C</MenuItem>
-              </Select>
-            </FormControl>
-          </Box>
-        </Grid>
+              {/* Filter by Brand */}
+              <FormControl fullWidth sx={{ mb: 2 }}>
+                <InputLabel>Brand</InputLabel>
+                <Select defaultValue="">
+                  <MenuItem value="brandA">Magnum</MenuItem>
+                  <MenuItem value="brandB">Havmore B</MenuItem>
+                  <MenuItem value="brandC">Vadilal C</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
+          </Grid>
 
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={3}>
+          <Grid container spacing={2}>
             {products.map((product, index) => (
-              <Grid size={{ md: 5 }} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                 <ProductCard product={product} />
               </Grid>
             ))}
           </Grid>
-        </Box>
+        </Grid>
       </Box>
     </>
   );
