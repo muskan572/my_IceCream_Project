@@ -161,7 +161,7 @@ const ConeProduct = () => {
 
           <Grid container spacing={2}>
             {products.map((product, index) => (
-              <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                 <ProductCard product={product} />
               </Grid>
             ))}
