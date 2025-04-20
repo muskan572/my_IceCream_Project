@@ -11,6 +11,7 @@ import { CupProduct } from "../modules/products/cupProduct";
 import { WaffProduct } from "../modules/products/waffProduct";
 import ContactUs from "../modules/contactUs/contactUs";
 import { AboutUs } from "../modules/aboutUs-page/aboutUs";
+import { Footer } from "../components";
 // ----------------------------------------------------------------------
 
 export function Router() {

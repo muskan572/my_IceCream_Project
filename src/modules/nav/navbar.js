@@ -137,7 +137,7 @@ export default function Navbars() {
             id="Products-menu"
             anchorEl={anchorEl}
             open={openn}
-            onClose={handleClose}
+            onClick={handleClose}
           >
             <NavbarMenu />
           </Menu>
