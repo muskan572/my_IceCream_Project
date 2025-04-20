@@ -109,8 +109,8 @@ const ConeProduct = () => {
           justifyContent: "space-between",
         }}
       >
-        <Grid container>
-          <Grid size={{ md: 3 }}>
+        <Grid>
+          <Grid size={{ md: 6 }}>
             <Box sx={{ width: 250, marginRight: 4 }}>
               <Typography variant="h6" gutterBottom>
                 Filters

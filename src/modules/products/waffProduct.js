@@ -153,15 +153,13 @@ const WaffProduct = () => {
             </Box>
           </Grid>
 
-          <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={3}>
-              {products.map((product, index) => (
-                <Grid size={{ md: 6 }} key={index}>
-                  <ProductCard product={product} />
-                </Grid>
-              ))}
-            </Grid>
-          </Box>
+          <Grid container spacing={3}>
+            {products.map((product, index) => (
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+                <ProductCard product={product} />
+              </Grid>
+            ))}
+          </Grid>
         </Grid>
       </Box>
     </>

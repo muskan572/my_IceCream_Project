@@ -103,8 +103,8 @@ const CakeProduct = () => {
         </Box>
       </Stack>
       <Box sx={{ display: "flex", p: 2 }}>
-        <Grid container>
-          <Grid size={{ md: 4 }}>
+        <Grid>
+          <Grid size={{ md: 6 }}>
             <Box sx={{ width: 250, marginRight: 4 }}>
               <Typography variant="h6" gutterBottom>
                 Filters
