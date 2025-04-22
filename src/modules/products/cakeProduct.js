@@ -180,7 +180,7 @@ const ProductCard = ({ product, index }) => (
           image={product.image}
           title={product.title}
           sx={{
-            width: "100px",
+            width: "150px",
             height: "230px",
           }}
         />
