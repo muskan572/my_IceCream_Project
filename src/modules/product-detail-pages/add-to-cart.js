@@ -15,11 +15,11 @@ import { useSelector, useDispatch } from "react-redux";
 
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { decrement, increment } from "../../app/createSlice";
+import { decrementProduct, incrementProduct } from "../../app/createSlice";
 
 export default function AddToCart() {
-  const products = useSelector((state) => state.cart.items);
-  const totalItems = useSelector((state) => state.cart.totalUniqueItems);
+  const products = useSelector((state) => state.cart.products);
+  const totalItems = useSelector((state) => state.cart.totalItems);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const dispatch = useDispatch();
 
@@ -76,11 +76,15 @@ export default function AddToCart() {
                         <TableCell>{item.name}</TableCell>
                         <TableCell align="right">${item.price}</TableCell>
                         <TableCell align="right">
-                          <Button onClick={() => dispatch(decrement(item.id))}>
+                          <Button
+                            onClick={() => dispatch(decrementProduct(item.id))}
+                          >
                             <RemoveIcon />
                           </Button>
                           {item.quantity}
-                          <Button onClick={() => dispatch(increment(item.id))}>
+                          <Button
+                            onClick={() => dispatch(incrementProduct(item.id))}
+                          >
                             <AddIcon />
                           </Button>
                         </TableCell>

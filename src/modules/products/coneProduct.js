@@ -16,6 +16,8 @@ import {
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../app/createSlice";
 
 const ConeProduct = () => {
   const products = [
@@ -172,8 +174,18 @@ const ConeProduct = () => {
   );
 };
 
-const ProductCard = ({ product }) => (
-  <>
+const ProductCard = ({ product, index }) => {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    const productWithId = {
+      ...product,
+      id: `${product.title}-${index}`, // ensure unique ID
+      price: parseFloat(product.price),
+    };
+    dispatch(addProduct(productWithId));
+  };
+  return (
     <Card sx={{ width: "260px" }}>
       <Box
         sx={{
@@ -209,6 +221,7 @@ const ProductCard = ({ product }) => (
           <CardActions>
             <Button
               variant="outlined"
+              onClick={handleAddToCart}
               sx={{
                 color: "#CE3D8A",
                 borderColor: "#CE3D8A",
@@ -221,6 +234,6 @@ const ProductCard = ({ product }) => (
         </Box>
       </CardContent>
     </Card>
-  </>
-);
+  );
+};
 export { ConeProduct };
