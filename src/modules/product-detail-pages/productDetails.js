@@ -17,7 +17,7 @@ import { useDispatch } from "react-redux";
 
 import { useState } from "react";
 
-import { add } from "@app/app/createSlice";
+import { add } from "../../app/createSlice";
 import DialogBuyNow from "./dialogBuyNow";
 import DialogGetQuote from "./dialogGetQuote";
 

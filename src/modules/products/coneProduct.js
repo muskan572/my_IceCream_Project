@@ -18,6 +18,8 @@ import Grid from "@mui/material/Grid2";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../app/createSlice";
+import { PATH_DASH } from "../../routes/path";
+import { Link } from "react-router-dom";
 
 const ConeProduct = () => {
   const products = [
@@ -229,6 +231,18 @@ const ProductCard = ({ product, index }) => {
               }}
             >
               Add To Cart
+            </Button>
+            <Button
+              component={Link}
+              to={PATH_DASH.productDetails}
+              variant="outlined"
+              sx={{
+                color: "#CE3D8A",
+                borderColor: "#CE3D8A",
+                borderRadius: 5,
+              }}
+            >
+              Buy Now
             </Button>
           </CardActions>
         </Box>

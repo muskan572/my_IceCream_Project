@@ -9,4 +9,5 @@ export const PATH_DASH = {
   cake: "/dashboard/cake",
   waff: "/dashboard/waff",
   addtocart: "/dashboard/add-to-cart",
+  productDetails: "/dashboard/product-details",
 };

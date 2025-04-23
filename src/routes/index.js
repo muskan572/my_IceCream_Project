@@ -12,6 +12,7 @@ import { WaffProduct } from "../modules/products/waffProduct";
 import ContactUs from "../modules/contactUs/contactUs";
 import { AboutUs } from "../modules/aboutUs-page/aboutUs";
 import AddToCart from "../modules/product-detail-pages/add-to-cart";
+import { ProductDetails } from "../modules/product-detail-pages/productDetails";
 
 // ----------------------------------------------------------------------
 
@@ -40,6 +41,7 @@ export function Router() {
             { path: PATH_DASH.cake, element: <CakeProduct /> },
             { path: PATH_DASH.waff, element: <WaffProduct /> },
             { path: PATH_DASH.addtocart, element: <AddToCart /> },
+            { path: PATH_DASH.productDetails, element: <ProductDetails /> },
           ],
         },
       ],
