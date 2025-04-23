@@ -11,6 +11,7 @@ import {
   Rating,
   Stack,
   Typography,
+  useTheme,
 } from "@mui/material";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { useDispatch } from "react-redux";
@@ -22,6 +23,7 @@ import DialogBuyNow from "./dialogBuyNow";
 import DialogGetQuote from "./dialogGetQuote";
 
 const ProductDetails = () => {
+  const theme = useTheme();
   const [open, setOpen] = useState(false);
   const [openBuyNow, setOpenBuyNow] = useState(false);
 
@@ -133,7 +135,7 @@ const ProductDetails = () => {
           }}
         >
           <img
-            src="Group 1261153042 1.png"
+            src="assets/images/Group 1261153042 1.png"
             alt="selected ice-cream"
             style={{ width: "260px", height: "650px" }}
           />
@@ -142,7 +144,7 @@ const ProductDetails = () => {
           <Typography variant="h4">
             Nutty Chocolate Delight Icecream with liquid chocolate in it{" "}
           </Typography>
-          <Rating sx={{ color: "#CE3D8A" }} />
+          <Rating sx={{ color: theme.palette.primary.main }} />
           <Typography variant="subtitle2">
             <strong>Brand:</strong> Amul{" "}
           </Typography>
@@ -199,7 +201,7 @@ const ProductDetails = () => {
                 variant="contained"
                 sx={{
                   borderRadius: 7,
-                  backgroundColor: "#CE3D8A",
+                  backgroundColor: theme.palette.primary.main,
                   width: "150px",
                   height: "42px",
                 }}
@@ -223,7 +225,7 @@ const ProductDetails = () => {
               variant="contained"
               onClick={handleClickOpen}
               sx={{
-                backgroundColor: "#CE3D8A",
+                backgroundColor: theme.palette.primary.main,
                 borderRadius: 7,
                 width: "150px",
                 height: "42px",
@@ -241,8 +243,8 @@ const ProductDetails = () => {
             <Button
               variant="outlined"
               sx={{
-                color: "#CE3D8A",
-                borderColor: "#CE3D8A",
+                color: theme.palette.primary.main,
+                borderColor: theme.palette.primary.main,
                 borderRadius: 7,
                 width: "150px",
                 height: "42px",
@@ -335,8 +337,8 @@ const ProductDetails = () => {
                     variant="outlined"
                     onClick={() => handleAdd(items)}
                     sx={{
-                      color: "#CE3D8A",
-                      borderColor: "#CE3D8A",
+                      color: theme.palette.primary.main,
+                      borderColor: theme.palette.primary.main,
                       borderRadius: 5,
                     }}
                   >

@@ -9,6 +9,7 @@ import {
   Divider,
   Stack,
   Typography,
+  useTheme,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
@@ -22,28 +23,28 @@ export default function DialogProduct({ open, onClose }) {
     {
       id: 1,
       costs: "$50.00",
-      image: "image 108.png",
+      image: "assets/images/image 258.png",
       title: "ice-cream",
       name: "Strawberry Flavour With Nuts",
     },
     {
       id: 2,
       costs: "$50.00",
-      image: "image 108.png",
+      image: "assets/images/image 258.png",
       title: "ice-cream",
       name: "Strawberry Flavour With Nuts",
     },
     {
       id: 3,
       costs: "$50.00",
-      image: "image 108.png",
+      image: "assets/images/image 258.png",
       title: "ice-cream",
       name: "Strawberry Flavour With Nuts",
     },
   ];
   const buttons = ["Cone", "Stick", "Cup", "Cake", "Waffels"];
   const [isSelected, setIsSelected] = useState(0);
-
+  const theme = useTheme();
   const dispatch = useDispatch();
   const handleAdd = (product) => {
     dispatch(addProduct(product));
@@ -99,14 +100,15 @@ export default function DialogProduct({ open, onClose }) {
                 key={index}
                 onClick={() => setIsSelected(index)}
                 sx={{
-                  outlineColor: "#CE3D8A",
-                  backgroundColor: isSelected === index ? "#CE3D8A" : "white",
+                  outlineColor: theme.palette.primary.main,
+                  backgroundColor:
+                    isSelected === index ? theme.palette.primary.main : "white",
                   color: isSelected === index ? "white" : "black",
                   marginLeft: "20px",
                   borderRadius: "20px",
                   boxShadow: " 0px 1px 0px 0px #00000040",
                   "&:hover": {
-                    backgroundColor: "#CE3D8A",
+                    backgroundColor: theme.palette.primary.main,
                     color: "white",
                   },
                 }}

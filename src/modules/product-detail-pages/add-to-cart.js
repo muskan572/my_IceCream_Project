@@ -10,6 +10,7 @@ import {
   TableHead,
   TableRow,
   Typography,
+  useTheme,
 } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -22,6 +23,7 @@ export default function AddToCart() {
   const totalItems = useSelector((state) => state.cart.totalItems);
   const totalPrice = useSelector((state) => state.cart.totalPrice);
   const dispatch = useDispatch();
+  const theme = useTheme();
 
   return (
     <Stack style={{ marginTop: "100px" }}>
@@ -47,14 +49,16 @@ export default function AddToCart() {
                 sx={{
                   width: "400px",
                   height: "400px",
-                  backgroundColor: "#eeeeee",
+                  backgroundColor: theme.palette.primary.light,
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  borderRadius: "100px",
+                  boxShadow: "1px 1px 1px 1px #00000040",
                 }}
               >
                 <img
-                  src={products.img}
+                  src="/assets/images/Group 1261153042 1.png"
                   alt="ice-cream"
                   style={{ width: "200px" }}
                 />

@@ -10,6 +10,7 @@ import {
   Stack,
   TextField,
   Typography,
+  useTheme,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import DialogProduct from "./dialogGetProduct";
@@ -22,7 +23,7 @@ import { decrementProduct, incrementProduct } from "../../app/createSlice";
 export default function DialogGetQuote({ handleClose }) {
   const cartItems = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
-
+  const theme = useTheme();
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -92,7 +93,7 @@ export default function DialogGetQuote({ handleClose }) {
             variant="contained"
             onClick={handleClickOpen}
             sx={{
-              bgcolor: "#CE3D8A",
+              bgcolor: theme.palette.primary.main,
               color: "white",
               width: "150px",
               borderRadius: "20px",
@@ -120,7 +121,7 @@ export default function DialogGetQuote({ handleClose }) {
                   alignItems="center"
                   backgroundColor="white"
                   border={1}
-                  borderColor="#CE3D8A"
+                  borderColor={theme.palette.primary.main}
                   borderRadius={10}
                   height="40px"
                   width="120px"
@@ -133,7 +134,7 @@ export default function DialogGetQuote({ handleClose }) {
                   >
                     <Box
                       sx={{
-                        bgcolor: "#CE3D8A",
+                        bgcolor: theme.palette.primary.main,
                         borderRadius: "50px",
                         width: "30px",
                         height: "30px",
@@ -152,7 +153,7 @@ export default function DialogGetQuote({ handleClose }) {
                   >
                     <Box
                       sx={{
-                        bgcolor: "#CE3D8A",
+                        bgcolor: theme.palette.primary.main,
                         borderRadius: "50px",
                         width: "30px",
                         height: "30px",
@@ -181,7 +182,7 @@ export default function DialogGetQuote({ handleClose }) {
         >
           <Button
             sx={{
-              bgcolor: "#CE3D8A",
+              bgcolor: theme.palette.primary.main,
               color: "white",
               width: "400px",
               display: "flex",
