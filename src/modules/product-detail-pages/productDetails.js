@@ -133,7 +133,7 @@ const ProductDetails = () => {
           }}
         >
           <img
-            src="Group 1261153040 1.png"
+            src="Group 1261153042 1.png"
             alt="selected ice-cream"
             style={{ width: "260px", height: "650px" }}
           />
