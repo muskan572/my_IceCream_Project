@@ -45,26 +45,26 @@ const ProductDetails = () => {
   };
   const sample = [
     {
-      img: "image 108.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-cream",
     },
     {
-      img: "image 109.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-cream",
     },
     {
-      img: "image 110.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-cream",
     },
     {
-      img: "image 111.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-cream",
     },
   ];
   const similar = [
     {
       id: 1,
-      img: "image 229.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-craem",
       name: "Nutty Chocolate Light",
       discountPrice: "$50.00",
@@ -72,7 +72,7 @@ const ProductDetails = () => {
     },
     {
       id: 2,
-      img: "image 229.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-cream",
       name: "Nutty Chocolate Light",
       discountPrice: "$50.00",
@@ -80,7 +80,7 @@ const ProductDetails = () => {
     },
     {
       id: 3,
-      img: "image 229.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-cream",
       name: "Nutty Chocolate Light",
       discountPrice: "$50.00",
@@ -88,7 +88,7 @@ const ProductDetails = () => {
     },
     {
       id: 4,
-      img: "image 229.png",
+      img: "assets/images/Group 1261153042 1.png",
       title: "ice-cream",
       name: "Nutty Chocolate Light",
       discountPrice: "$50.00",
