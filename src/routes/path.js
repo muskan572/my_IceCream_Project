@@ -8,4 +8,5 @@ export const PATH_DASH = {
   cup: "/dashboard/cup",
   cake: "/dashboard/cake",
   waff: "/dashboard/waff",
+  addtocart: "/dashboard/add-to-cart",
 };

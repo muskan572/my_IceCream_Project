@@ -11,7 +11,8 @@ import { CupProduct } from "../modules/products/cupProduct";
 import { WaffProduct } from "../modules/products/waffProduct";
 import ContactUs from "../modules/contactUs/contactUs";
 import { AboutUs } from "../modules/aboutUs-page/aboutUs";
-import { Footer } from "../components";
+import AddToCart from "../modules/product-detail-pages/add-to-cart";
+
 // ----------------------------------------------------------------------
 
 export function Router() {
@@ -38,6 +39,7 @@ export function Router() {
             { path: PATH_DASH.cup, element: <CupProduct /> },
             { path: PATH_DASH.cake, element: <CakeProduct /> },
             { path: PATH_DASH.waff, element: <WaffProduct /> },
+            { path: PATH_DASH.addtocart, element: <AddToCart /> },
           ],
         },
       ],

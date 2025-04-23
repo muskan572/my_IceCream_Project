@@ -27,6 +27,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 import NavbarMenu from "./navbarMenu";
 import { Link, Outlet } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Navbars() {
   const [input, setInput] = useState("");
@@ -48,6 +49,12 @@ export default function Navbars() {
     setOpen(newOpen);
   };
   const theme = useTheme();
+
+  const totalItemCount = useSelector(
+    (state) =>
+      state.cart.items.reduce((acc, item) => acc + item.quantity, 0) +
+      state.cart.products.reduce((acc, item) => acc + item.quantity, 0)
+  );
 
   const DrawerList = (
     <Box sx={{ width: 250 }} onClick={toggleDrawer(false)}>
@@ -152,10 +159,17 @@ export default function Navbars() {
             />
           </IconButton>
 
-          <IconButton>
-            <Badge badgeContent={1} sx={{ color: theme.palette.grey[900] }}>
+          <IconButton
+            component={Link}
+            to={PATH_DASH.addtocart}
+            aria-label="View cart"
+          >
+            <Badge
+              badgeContent={totalItemCount}
+              sx={{ color: theme.palette.grey[900] }}
+            >
               <ShoppingBagOutlinedIcon
-                sx={{ color: "black", width: { xs: "20px", sm: "25px" } }}
+                sx={{ width: { xs: "20px", sm: "25px" } }}
               />
             </Badge>
           </IconButton>
@@ -228,8 +242,8 @@ export default function Navbars() {
             </Button>
           </Stack>
         </Toolbar>
-        <Outlet />
       </AppBar>
+      <Outlet />
     </>
   );
 }

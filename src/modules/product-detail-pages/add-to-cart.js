@@ -15,7 +15,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { decrement, increment } from "@app/app/createSlice";
+import { decrement, increment } from "../../app/createSlice";
 
 export default function AddToCart() {
   const products = useSelector((state) => state.cart.items);
