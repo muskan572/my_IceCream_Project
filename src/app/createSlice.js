@@ -63,7 +63,10 @@ const cartSlice = createSlice({
         (acc, item) => acc + item.price * item.quantity,
         0
       );
-      state.totalItems = state.items.length;
+      state.totalItems = state.items.reduce(
+        (acc, item) => acc + item.quantity,
+        0
+      );
     },
     incrementProduct(state, action) {
       const product = state.products.find(
