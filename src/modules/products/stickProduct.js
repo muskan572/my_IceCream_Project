@@ -18,6 +18,8 @@ import Grid from "@mui/material/Grid2";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { addProduct } from "../../app/createSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { PATH_DASH } from "../../routes/path";
 
 const StickProduct = () => {
   const products = [
@@ -221,6 +223,18 @@ const ProductCard = ({ product, index }) => {
               }}
             >
               Add To Cart
+            </Button>
+            <Button
+              component={Link}
+              to={PATH_DASH.productDetails}
+              variant="outlined"
+              sx={{
+                color: "#CE3D8A",
+                borderColor: "#CE3D8A",
+                borderRadius: 5,
+              }}
+            >
+              Buy Now
             </Button>
           </CardActions>
         </Box>
