@@ -43,7 +43,7 @@ export default function DialogGetQuote({ handleClose }) {
 
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          Welcome to Syncglob quote. Please fill in the form below before
+          Welcome to ScoopWise quote. Please fill in the form below before
           requesting the quote.
         </DialogContentText>
         <TextField
