@@ -11,4 +11,5 @@ export const PATH_DASH = {
   addtocart: "/dashboard/add-to-cart",
   productDetails: "/dashboard/product-details",
   wishlist: "/dashboard/wishlist",
+  categories: "/dashboard/categories",
 };

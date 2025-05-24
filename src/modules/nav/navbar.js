@@ -129,6 +129,14 @@ export default function Navbars() {
               >
                 About Us
               </Button>
+              <Button
+                component={Link}
+                to={PATH_DASH.categories}
+                color="inherit"
+                sx={{ fontWeight: "normal", fontSize: "17px" }}
+              >
+                Categories
+              </Button>
 
               <Button
                 component={Link}
