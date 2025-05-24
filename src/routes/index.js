@@ -13,6 +13,7 @@ import ContactUs from "../modules/contactUs/contactUs";
 import { AboutUs } from "../modules/aboutUs-page/aboutUs";
 import AddToCart from "../modules/product-detail-pages/add-to-cart";
 import { ProductDetails } from "../modules/product-detail-pages/productDetails";
+import Wishlist from "../modules/wish-list/wishlist";
 
 // ----------------------------------------------------------------------
 
@@ -42,6 +43,7 @@ export function Router() {
             { path: PATH_DASH.waff, element: <WaffProduct /> },
             { path: PATH_DASH.addtocart, element: <AddToCart /> },
             { path: PATH_DASH.productDetails, element: <ProductDetails /> },
+            {path: PATH_DASH.wishlist, element: <Wishlist/>}, // Redirect wishlist to home for now
           ],
         },
       ],

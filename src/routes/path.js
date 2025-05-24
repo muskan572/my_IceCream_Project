@@ -10,4 +10,5 @@ export const PATH_DASH = {
   waff: "/dashboard/waff",
   addtocart: "/dashboard/add-to-cart",
   productDetails: "/dashboard/product-details",
+  wishlist: "/dashboard/wishlist",
 };

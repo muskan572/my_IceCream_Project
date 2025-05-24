@@ -149,7 +149,8 @@ export default function Navbars() {
             <NavbarMenu />
           </Menu>
 
-          <IconButton edge="start" color="inherit" aria-label="menu">
+          <IconButton component={Link}
+            to={PATH_DASH.wishlist} aria-label="menu">
             <FavoriteBorderIcon
               sx={{
                 color: theme.palette.grey[900],
