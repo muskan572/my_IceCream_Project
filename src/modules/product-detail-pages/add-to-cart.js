@@ -13,9 +13,9 @@ import {
   useTheme,
 } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { decrementProduct, incrementProduct } from "../../app/createSlice";
 
 export default function AddToCart() {
@@ -27,44 +27,63 @@ export default function AddToCart() {
 
   return (
     <Stack style={{ marginTop: "100px" }}>
+    {products.length > 0 && (
       <Typography variant="h4" gutterBottom>
         Your Cart ({totalItems} items)
       </Typography>
+    )}
+
       <Box>
         {products.length === 0 ? (
-          <Typography>Cart is Empty</Typography>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            height="300px"
+            textAlign="center"
+            sx={{ opacity: 0.8 }}
+          >
+            <ShoppingCartOutlinedIcon sx={{ fontSize: 80, color: "grey.500" }} />
+            <Typography variant="h6" mt={2}>
+              Your cart is empty
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Looks like you haven’t added anything to your cart yet.
+            </Typography>
+          </Box>
         ) : (
           <>
             <Stack
-              direction="row"
-              style={{
-                width: "full",
-                margin: "20px",
-                display: "flex",
+              direction={{ xs: "column", md: "row" }}
+              spacing={3}
+              sx={{
+                width: "100%",
+                marginTop: "20px",
                 alignItems: "center",
                 justifyContent: "space-evenly",
               }}
             >
               <Box
                 sx={{
-                  width: "400px",
-                  height: "400px",
+                  width: 300,
+                  height: 300,
                   backgroundColor: theme.palette.primary.light,
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  borderRadius: "100px",
-                  boxShadow: "1px 1px 1px 1px #00000040",
+                  borderRadius: "100%",
+                  boxShadow: 2,
                 }}
               >
                 <img
                   src="/assets/images/Group 1261153042 1.png"
                   alt="ice-cream"
-                  style={{ width: "200px" }}
+                  style={{ width: "160px" }}
                 />
               </Box>
 
-              <TableContainer component={Paper}>
+              <TableContainer component={Paper} sx={{ maxWidth: "100%", overflowX: "auto" }}>
                 <Table>
                   <TableHead>
                     <TableRow>
@@ -82,12 +101,14 @@ export default function AddToCart() {
                         <TableCell align="right">
                           <Button
                             onClick={() => dispatch(decrementProduct(item.id))}
+                            size="small"
                           >
                             <RemoveIcon />
                           </Button>
                           {item.quantity}
                           <Button
                             onClick={() => dispatch(incrementProduct(item.id))}
+                            size="small"
                           >
                             <AddIcon />
                           </Button>
@@ -100,10 +121,10 @@ export default function AddToCart() {
                   </TableBody>
                 </Table>
               </TableContainer>
-
-              {/* Display total price */}
             </Stack>
-            <Box mt={4} display="flex" justifyContent="flex-end">
+
+            {/* Total Price */}
+            <Box mt={4} display="flex" justifyContent="flex-end" px={2}>
               <Typography variant="h5">Total Price: ${totalPrice}</Typography>
             </Box>
           </>
@@ -112,3 +133,4 @@ export default function AddToCart() {
     </Stack>
   );
 }
+
