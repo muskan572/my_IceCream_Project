@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Container,
-  Grid,
+  Grid2,
   Card,
   CardContent,
   CardMedia,
@@ -72,9 +72,9 @@ function Wishlist() {
           </Typography>
         </Box>
       ) : (
-        <Grid container spacing={3}>
+        <Grid2 container spacing={3}>
           {wishlist.map((item) => (
-            <Grid item xs={12} sm={6} md={4} key={item.id}>
+            <Grid2 item xs={12} sm={6} md={4} key={item.id}>
               <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
                 <CardMedia
                   component="img"
@@ -108,9 +108,9 @@ function Wishlist() {
                   </Box>
                 </CardActions>
               </Card>
-            </Grid>
+            </Grid2>
           ))}
-        </Grid>
+        </Grid2>
       )}
     </Container>
   );
