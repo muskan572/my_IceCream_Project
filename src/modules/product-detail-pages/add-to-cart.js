@@ -19,6 +19,9 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { decrementProduct, incrementProduct } from "../../app/createSlice";
 
+import { Link } from "react-router-dom";
+import { PATH_DASH } from "../../routes/path";
+
 export default function AddToCart() {
   const products = useSelector((state) => state.cart.products);
   const totalItems = useSelector((state) => state.cart.totalItems);
@@ -63,7 +66,9 @@ export default function AddToCart() {
           <Typography variant="body2" color="text.secondary">
             Looks like you haven’t added anything to your cart yet.
           </Typography>
-          <Button
+          <Button 
+            component={Link}
+            to={PATH_DASH.cone}
             variant="contained"
             color="primary"
             sx={{ mt: 1, textTransform: "none", px: 4 }}
