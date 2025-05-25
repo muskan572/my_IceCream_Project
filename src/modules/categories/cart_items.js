@@ -1,6 +1,10 @@
 import { useState } from 'react';
-import { Card, CardMedia, CardContent, Typography, TextField, Box } from '@mui/material';
+import { Card, CardMedia, CardContent, Typography, TextField, Box, Rating
+, CardActions, Button
+ } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import { useDispatch } from 'react-redux';
+import { addProduct } from "../../app/createSlice";
 
 const categoryData = [
   { name: "Oreo Chunks Flavour", image: "assets/images/image 258.png" },
@@ -17,6 +21,16 @@ const categoryData = [
 
 const Categories = () => {
   const [search, setSearch] = useState("");
+
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+      const productWithId = {
+        ...categoryData, // spread the category data
+        id: `${categoryData.title}`, // ensure unique ID
+        price: parseFloat(categoryData.price),
+      };
+      dispatch(addProduct(productWithId));
+    };
 
   const filteredCategories = categoryData.filter(cat =>
     cat.name.toLowerCase().includes(search.toLowerCase())
@@ -72,7 +86,42 @@ const Categories = () => {
                     height: { xs: "280px", sm: "290px", md: "220px" },
                   }}
                 />
+               
+          
               </Box>
+               <Rating />
+               <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+              <CardActions>
+            <Button
+              variant="outlined"
+              onClick={handleAddToCart}
+              sx={{
+                color: "#CE3D8A",
+                borderColor: "#CE3D8A",
+                borderRadius: 5,
+              }}
+            >
+              Add To Cart
+            </Button>
+            <Button
+              variant="outlined"
+              
+              sx={{
+                color: "#CE3D8A",
+                borderColor: "#CE3D8A",
+                borderRadius: 5,
+              }}
+            >
+              Buy Now
+            </Button>
+          </CardActions>
+          </Box>
             </Card>
           </Grid>
         ))}
