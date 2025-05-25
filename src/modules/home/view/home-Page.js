@@ -10,6 +10,8 @@ import Grid from "@mui/material/Grid2";
 
 import { ProductItems } from "../../../components";
 import { About, FlavoursCard, Footer } from "../../../components";
+import { Link } from "react-router-dom";
+import { PATH_DASH } from "../../../routes/path";
 
 const HomePage = () => {
   const buttons = ["Cone", "Stick", "Cup", "Cake", "Waffels"];
@@ -117,6 +119,8 @@ const HomePage = () => {
             </Typography>
 
             <Button
+            component={Link}
+            to={PATH_DASH.categories}
               variant="contained"
               disableRipple
               sx={{

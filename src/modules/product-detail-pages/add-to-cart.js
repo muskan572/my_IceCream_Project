@@ -68,7 +68,7 @@ export default function AddToCart() {
           </Typography>
           <Button 
             component={Link}
-            to={PATH_DASH.cone}
+            to={PATH_DASH.categories}
             variant="contained"
             color="primary"
             sx={{ mt: 1, textTransform: "none", px: 4 }}

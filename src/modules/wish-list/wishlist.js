@@ -16,21 +16,45 @@ import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 const initialWishlist = [
   {
     id: 1,
-    name: "Wireless Headphones",
+    name: "Oreo Chunks Flavour",
     price: "$99",
-    image: "https://via.placeholder.com/300x200?text=Headphones",
+    image: "assets/images/image 258.png",
   },
   {
     id: 2,
-    name: "Smart Watch",
+    name: "Nutella Flavour",
     price: "$199",
-    image: "https://via.placeholder.com/300x200?text=Smart+Watch",
+    image: "assets/images/image 257.png",
   },
   {
     id: 3,
-    name: "Laptop Stand",
+    name: "Redberry Flavour",
     price: "$29",
-    image: "https://via.placeholder.com/300x200?text=Laptop+Stand",
+    image: "assets/images/Group 1261153053 1 (1).png",
+  },
+  {
+    id: 4,
+    name: "Strawberry Flavour",
+    price: "$99",
+    image: "assets/images/Group 1261153059 1.png",
+  },
+  {
+    id: 5,
+    name: "Chocolate Flavour",
+    price: "$99",
+    image: "assets/images/Group 1261153055 1.png",
+  },
+  {
+    id: 6,
+    name: "Choco Creame Flavour",
+    price: "$99",
+    image: "assets/images/Group 1261153024 1.png",
+  },
+  {
+    id: 7,
+    name: "White Chocolate Flavour",
+    price: "$99",
+    image: "assets/images/Group 1261153043 1.png",
   },
 ];
 
@@ -76,12 +100,23 @@ function Wishlist() {
           {wishlist.map((item) => (
             <Grid2 item xs={12} sm={6} md={4} key={item.id}>
               <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
+                <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
                 <CardMedia
                   component="img"
-                  height="180"
+                  sx={{
+                    width: { xs: "170px", sm: "160px", md: "120px" },
+                    height: { xs: "280px", sm: "290px", md: "220px" },
+                  }}
                   image={item.image}
                   alt={item.name}
                 />
+                </Box>
                 <CardContent>
                   <Typography variant="h6">{item.name}</Typography>
                   <Typography variant="body1" color="text.secondary">
