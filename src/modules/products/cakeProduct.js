@@ -175,7 +175,7 @@ const ProductCard = ({ product, index }) => {
   const handleAddToCart = () => {
     const productWithId = {
       ...product,
-      id: `${product.title}-${index}`, // ensure unique ID
+      id: `${product.title}-${index}`,
       price: parseFloat(product.price),
     };
     dispatch(addProduct(productWithId));
