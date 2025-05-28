@@ -13,13 +13,16 @@ import {
   Select,
   Stack,
   Typography,
+  useTheme,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { addProduct } from "../../app/createSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { PATH_DASH } from "../../routes/path";
+import { useState } from "react";
 
 const StickProduct = () => {
   const products = [
@@ -172,7 +175,13 @@ const StickProduct = () => {
 
 const ProductCard = ({ product, index }) => {
   const dispatch = useDispatch();
+const [liked, setLiked] = useState(false);
 
+  const theme = useTheme();
+
+  const handleClick = () => {
+    setLiked((prev) => !prev);
+  };
   const handleAddToCart = () => {
     const productWithId = {
       ...product,
@@ -203,7 +212,25 @@ const ProductCard = ({ product, index }) => {
         <Box>
           <Stack direction="row" justifyContent="space-between">
             <Typography sx={{ fontWeight: "300" }}>{product.title}</Typography>
-            <FavoriteBorderIcon />
+            <IconButton onClick={handleClick} aria-label="favorite">
+      {liked ? (
+        <FavoriteIcon
+          sx={{
+            color: '#e91e63', // or use theme.palette.error.main
+            height: '25px',
+            display: { xs: 'none', lg: 'block' },
+          }}
+        />
+      ) : (
+        <FavoriteBorderIcon
+          sx={{
+            color: theme.palette.grey[900],
+            height: '25px',
+            display: { xs: 'none', lg: 'block' },
+          }}
+        />
+      )}
+    </IconButton>
           </Stack>
           <Stack direction="row" spacing={1}>
             <Typography>{product.Price}</Typography>
