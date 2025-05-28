@@ -14,7 +14,7 @@ import {
   Stack,
   Typography,
   IconButton,
-  useTheme
+  useTheme,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
