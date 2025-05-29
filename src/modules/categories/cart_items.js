@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Card, CardMedia, CardContent, Typography, TextField, Box, Rating
-, CardActions, Button
+, CardActions, Button,IconButton, useTheme
  } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import { useDispatch } from 'react-redux';
 import { addProduct } from "../../app/createSlice";
-
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 const categoryData = [
   { name: "Oreo Chunks Flavour", image: "assets/images/image 258.png" },
   { name: "Strawberry Flavour", image: "assets/images/Group 1261153059 1.png" },
@@ -21,6 +22,14 @@ const categoryData = [
 
 const Categories = () => {
   const [search, setSearch] = useState("");
+
+    const [liked, setLiked] = useState(false);
+
+  const theme = useTheme();
+
+  const handleClick = () => {
+    setLiked((prev) => !prev);
+  };
 
   const dispatch = useDispatch();
   const handleAddToCart = () => {
@@ -121,6 +130,25 @@ const Categories = () => {
               Buy Now
             </Button>
           </CardActions>
+          <IconButton onClick={handleClick} aria-label="favorite">
+      {liked ? (
+        <FavoriteIcon
+          sx={{
+            color:  theme.palette.error.main,
+            height: '25px',
+            display: { xs: 'none', lg: 'block' },
+          }}
+        />
+      ) : (
+        <FavoriteBorderIcon
+          sx={{
+            color: theme.palette.grey[900],
+            height: '25px',
+            display: { xs: 'none', lg: 'block' },
+          }}
+        />
+      )}
+    </IconButton>
           </Box>
             </Card>
           </Grid>
